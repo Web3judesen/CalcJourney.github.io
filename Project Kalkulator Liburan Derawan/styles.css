@@ -1,0 +1,156 @@
+/* Gaya Umum */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/bgDerawan.jpg') no-repeat center center fixed; /* Gambar latar */
+    background-size: cover; /* Membuat gambar sesuai ukuran layar */
+    color: #333;
+  }
+  
+
+
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(66, 5, 5, 0.52); /* Latar belakang putih transparan */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative; /* Untuk elemen pseudo */
+    z-index: 1;
+    overflow: hidden; /* Agar animasi tidak keluar area */
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+      hsl(169, 100%, 68%), 
+      hsl(171, 70%, 50%), 
+      hsl(0, 0%, 100%), 
+      hsl(183, 86%, 43%)
+    );
+    background-size: 400% 400%;
+    animation: rotate-border 6s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes rotate-border {
+    0% {
+      transform: rotate(0deg);
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      transform: rotate(360deg);
+      background-position: 0% 50%;
+    }
+  }
+  
+
+/* Logo */
+.logo-container {
+  text-align: center; /* Untuk memusatkan kontainer */
+  margin-top: 60px; /* Jarak atas kontainer */
+}
+.logo {
+  width: 100px; /* Atur ukuran logo */
+  height: auto; /* Jaga proporsi */
+  display: block; /* Blok agar sejajar */
+  margin: 0 auto; /* Pusatkan logo */
+}
+
+.logo-title {
+  margin: auto;
+  font-size: 24px; /* Ukuran teks */
+  font-weight: bold; /* Tebalkan huruf */
+  color: #09c58d; /* Warna teks */
+  margin-top: 10px; /* Jarak antara logo dan judul */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek bayangan */
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Judul */
+h1 {
+  font-size: 1.8em;
+  color: #343936; /* Hijau dedaunan */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(234, 233, 233, 0.3);
+}
+
+/* Formulir */
+form label {
+  display: block;
+  margin: 10px 0 10px;
+  font-weight: bold;
+  color: #000000; /* Oranye tropis */
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #251e1e;
+  border-radius: 10px;
+  font-size: 1em;
+  box-shadow: inset 0 2px 4px rgba(228, 17, 17, 0.1);
+}
+
+/* Tombol Hitung */
+button {
+  background: #26c1e7; /* Oranye tropis */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #0015ff; /* Koral cerah */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.2);
+}
+
+/* Hasil Kalkulasi */
+#result {
+  margin-top: 20px;
+  padding: 7px;
+  background: #2dc7de; /* Hijau dedaunan */
+  color: #ffffff;
+  border-radius: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#total-cost {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}

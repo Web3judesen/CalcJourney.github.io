@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Biaya Liburan</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <div class="logo-container">
+    <img src="images/LOGOKABILI.png"alt="Logo"class="logo">
+    <h1 class="logo-title">KaBiLi</h1>
+  </div>
+  <div class="container">
+    <h1>KALKULATOR BIAYA LIBURAN
+  <h1> 
+    </h1>
+    <form id="trip-form">
+      <label for="transport">Biaya Transportasi (Rp):</label>
+      <input type="number" id="transport" placeholder="Contoh: 1000000">
+
+      <label for="accommodation">Biaya Penginapan per Malam (Rp):</label>
+      <input type="number" id="accommodation" placeholder="Contoh: 300000">
+
+      <label for="nights">Jumlah Malam Menginap (Rp):</label>
+      <input type="number" id="nights" placeholder="Contoh: 3">
+
+      <label for="food">Biaya Makan per Hari (Rp):</label>
+      <input type="number" id="food" placeholder="Contoh: 150000">
+
+      <label for="activities">Biaya Aktivitas (Rp):</label>
+      <input type="number" id="activities" placeholder="Contoh: 500000">
+
+      <label for="snacking">Biaya Jajan Cemilan (Rp):</label>
+      <input for="number" id="snacking" placeholder="contoh: 500000">
+
+      <button type="button" id="calculate-btn">Hitung Total Biaya</button>
+    </form>
+
+    <div id="result">
+      <h2>Total Biaya Liburan:</h2>
+      <p id="total-cost">Rp 0</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
